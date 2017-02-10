@@ -329,3 +329,82 @@ a:hover {
 	display: block;
 	background:linear-gradient(60deg,#efefef,#fff);
 }
+
+@media screen and (max-width: 500px) {
+	#site_nav {
+		display: none;
+	}
+	#site_header .logo {
+		width: 90%;
+	}
+	#site_header .logo img {
+		width:100%;
+		margin-bottom:10px;
+	}
+	#site_header .subtext {
+		max-width: 100%;
+		font-size: 1.2em;
+		padding: 3em 1.5em;
+		border:none;
+		box-sizing: border-box;
+	}
+	#site_header .logo > span {
+    	font-size: 1.5em;
+    }
+    #site_header {
+    	flex-direction: column;
+    }
+    #events .row {
+    	flex-direction: column;
+    }
+    #events .row .card {
+    	flex-direction: column;
+    	width: 100%;
+    	margin:10px 0px;
+    }
+    #events .row.flip .card {
+    	flex-direction: column-reverse;
+    	width:100%;
+    	text-align:initial;
+    }
+    #events .row .card .desc {
+    	padding-bottom:3.5em;
+    	font-size: 1.2em;
+    }
+    #gallery {
+    	display: block;
+    	height:unset;
+    }
+    #gallery > div {
+    	display: block;
+    }
+    #gallery > .image {
+    	height:40vh;
+    }
+	#gallery > .subtext {
+		width:100%;
+		height:55vh;
+		display: block;
+	}
+	#gallery .tracker {
+		display: none;
+	}
+	#gallery > .subtext > .slide_caption > p {
+		font-size: 1.2em;
+		padding-bottom:2em;
+		max-width: 100%;
+	}
+	#footer {
+		flex-direction: column;
+		height:unset;
+	}
+	#team {
+		max-width: 100%;
+		padding:2em 20px;
+		box-sizing: border-box;
+	}
+	#team div.dude {
+		width:20vw;
+		height: 20vw;
+	}
+}

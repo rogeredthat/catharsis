@@ -1,21 +1,21 @@
 var counter = 0;
 var slideshow = null;
-var sliderLength = $('#gallery .slide').length;
+var sliderLength = $('#events .slide').length;
 
 $.fn.nextOrFirst = function(selector) {
     var next = this.next(selector);
     return (next.length) ? next : this.prevAll(selector).last();
 }
 
-$('#gallery .tracker div').click(function(){
+$('#events .tracker div').click(function(){
 	counter = $(this).parent().find('div').index($(this));
 	moveSliderTo(counter);
 });
 
 function moveSliderTo(index) {
-	$('#gallery .tracker div').eq(index).addClass('active').siblings().removeClass('active');
-	$('#gallery .slide').eq(index).addClass('active').siblings().removeClass('active');
-	$('#gallery .slide_caption').eq(index).addClass('active').siblings().removeClass('active');
+	$('#events .tracker div').eq(index).addClass('active').siblings().removeClass('active');
+	$('#events .slide').eq(index).addClass('active').siblings().removeClass('active');
+	$('#events .slide_caption').eq(index).addClass('active').siblings().removeClass('active');
 	counter = (counter+1)%sliderLength;
 	if(slideshow) clearTimeout(slideshow);
 	slideshow = setTimeout(function(){
